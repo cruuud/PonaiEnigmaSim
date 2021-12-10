@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="default" name="Create Build">
+    <!--ANT 1.7 is required -->
+    <target name="createBuild">
+    	
+        <jar destfile="./PonaiEnigmaSim.jar">
+            <manifest>                
+            	<attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+            	<attribute name="Rsrc-Main-Class" value="nl.ponai.crypto.enigma.PonaiEnigmaSim"/>
+            	<attribute name="Class-Path" value="."/>
+            	<attribute name="Rsrc-Class-Path" value="./"/>
+            </manifest>
+        	<zipfileset src="jar-in-jar-loader.zip"/>
+            <zipfileset dir="bin"/>                    	
+        </jar>      
+    	
+    	<property name="enigmasim.appdir" value="PonaiEnigmaSim_v1"/>    	
+    	<zip destfile="./build/${enigmasim.appdir}.zip" compress="true">    		
+    		<zipfileset dir="." includes="PonaiEnigmaSim.jar,README.txt" prefix="${enigmasim.appdir}"/>    		
+    	</zip>
+    	<delete file="./PonaiEnigmaSim.jar" quiet="true"/>    	
+    </target>
+	
+	<target name="setVersion">
+		<buildnumber />
+		<tstamp />
+    	<!-- Versioning -->
+    	<property name="enigmasim.build" value="${DSTAMP}.${build.number}"/>
+    	<replaceregexp file="src/nl/ponai/crypto/enigma/Version.java" flags="i" match="build.*&quot;" replace="build ${enigmasim.build}&quot;" />    	
+	</target>
+	
+	<target name="default">
+	</target>	
+</project>
