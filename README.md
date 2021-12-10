@@ -38,7 +38,7 @@ emulator could not be deciphered by some other emulator and vice versa.
 I gave this application to the general public, so anyone can fiddle around with it. You may copy/paste/use anything you
 find in this application, better yet: you can do anything you want with it.
 I just hope that you will like it.
-If you want to use anything from this application for commercial purposes, I will be last one to stop you, but I will not like you.
+If you want to use anything from this application for commercial purposes, I will be the last one to stop you, but I will not like you ;-)
 
 ###### Emulated machines:
 
