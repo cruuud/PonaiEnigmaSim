@@ -13,7 +13,6 @@ Ponai Enigma Sim
      His awesome Javascript emulator can be found here: https://people.physik.hu-berlin.de/~palloks/js/enigma/index_en.html
   David Hamer - Helping me out with questions regarding the stepping mechanism of the rotors
   
-  You can contact me at ponai@ziggo.nl for any questions/remarks/bug etc.  
   Be aware that I tried my best to emulate everything as precise as I could, based on the information I could find,
   but this application will definitely contain bugs and you will come across situations where a message deciphered by this
   emulator could not be deciphered by some other emulator and vice versa.
